@@ -1,0 +1,94 @@
+
+sudo pacman -Syyu
+
+#---
+
+#base-devel devtools
+	pacman -S base-devel devtools
+
+#HTOP
+	sudo pacman -Suuy htop
+
+#Boinc
+	sudo pacman -Syy boinc
+	ln -s /var/lib/boinc/gui_rpc_auth.cfg gui_rpc_auth.cfg
+	sudo chmod 644 gui_rpc_auth.cfg
+	sudo systemctl status boinc.service
+	sudo systemctl start boinc.service
+	sudo systemctl enable boinc.service
+
+#dropbox
+	sudo yaourt -S dropbox
+
+#Skype
+	????sudo pacman -S pulseaudio pulseaudio-alsa pavucontrol
+
+
+#krusader
+	sudo pacman -S arj unarj cabextract unrar krename kdesdk-kompare p7zip wxgtk2.8 rpmextract cpio unace cfv kdenetwork-kget mlocate --needed --noconfirm && yaourt -S md5deep lha rar --noconfirm
+	sudo pacman -S krusader
+
+#owncloud
+	sudo pacman -S owncloud-client
+
+#Haskell
+	sudo nano /etc/pacman.conf
+	xxxxxxxxxxxxxxxxxxxxxx
+	[haskell-core]
+	Server = http://xsounds.org/~haskell/core/$arch
+
+	[extra]
+	SigLevel = PackageRequired
+	Include = /etc/pacman.d/mirrorlist
+	xxxxxxxxxxxxxxxxxxxxxx
+	sudo pacman-key -r 4209170B
+	sudo pacman-key --lsign-key 4209170B
+	pacman -S ghc cabal-install happy alex
+	sudo pacman -S ghc cabal-install happy alex
+	sudo cabal update
+	sudo cabal install cabal-install
+
+#openTTD
+	sudo pacman -S openttd
+
+
+#notepadqq
+	yaourt -Sy notepadqq
+
+#Brackets
+	yaourt -Sy brackets
+
+#git-cola
+	yaourt -S git-cola
+
+#anaconda
+	sudo pacman -Syy anaconda
+
+#-------------------------------------------
+#evernote
+	su -c "pacman -S libpng12"
+
+#virtualbox
+sudo pacman -S virtualbox
+
+
+..................................
+error al instalar
+
+#telegram
+	yaourt -Sy telegram-desktop 
+
+----------------------
+no tan buenas
+
+#gitg
+	sudo pacman -Syy gitg
+
+
+
+
+
+
+
+
+
