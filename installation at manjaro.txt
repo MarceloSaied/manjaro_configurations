@@ -58,11 +58,23 @@ sudo pacman -Syyu
 #Brackets
 	yaourt -Sy brackets
 
-#git-cola
-	yaourt -S git-cola
-
 #anaconda
 	sudo pacman -Syy anaconda
+	conda update conda
+	conda update anaconda
+
+#smartgit
+	download tar from http://www.syntevo.com/smartgit/
+	
+#telegram
+	//yaourt -Sy telegram-desktop
+	
+	cd ~/Downloads
+	wget https://tdesktop.com/linux32
+	tar -xJvf  linux32  tsetup32.0.8.11.tar.xz
+	sudo mv Telegram /opt/telegram
+	sudo ln -sf /opt/telegram /usr/bin/telegram
+	telegram
 
 #-------------------------------------------
 #evernote
@@ -75,8 +87,6 @@ sudo pacman -S virtualbox
 ..................................
 error al instalar
 
-#telegram
-	yaourt -Sy telegram-desktop 
 
 ----------------------
 no tan buenas
@@ -84,7 +94,8 @@ no tan buenas
 #gitg
 	sudo pacman -Syy gitg
 
-
+#git-cola
+	yaourt -S git-cola
 
 
 
